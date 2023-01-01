@@ -27,14 +27,18 @@ document.querySelector('button[type="submit"]').addEventListener('click', functi
         card.classList.add('card');
         card.innerHTML = `
           <div class="card-body">
-            <h5 class="card-title"><a href="${repo.html_url}">${repo.full_name}</a></h5>
+            <!-- Separate the username from the repository name -->
+            <h5 class="card-title"><a href="${repo.html_url}">${repo.full_name.split('/')[0]}</a> / <a href="${repo.html_url}">${repo.full_name.split('/')[1]}</a></h5>
             <p class="card-text">${repo.description}</p>
             <p class="card-text"><strong>Language:</strong> ${repo.language}</p>
-            <p class="card-text"><strong>Stars:</strong> ${repo.stargazers_count}</p>
-            <p class="card-text"><strong>Forks:</strong> ${repo.forks_count}</p>
+            <!-- Display the stars count as an icon -->
+            <p class="card-text"><strong></strong> <i class="fas fa-star"></i> ${repo.stargazers_count}</p>
+            <!-- Display the forks count as an icon -->
+            <p class="card-text"><strong></strong> <i class="fas fa-code-branch"></i> ${repo.forks_count}</p>
           </div>
         `;
         document.querySelector('#card-container').appendChild(card);
       });
+      
     });
   });
