@@ -49,8 +49,7 @@ document.querySelector('button[type="submit"]').addEventListener('click', functi
         card.classList.add('card');
         card.innerHTML = `
           <div class="card-body">
-            <!-- Use the full_name property directly -->
-            <h5 class="card-title"><a href="${repo.html_url}">${repo.full_name}</a></h5>
+            <h5 class="card-title"><a href="${repo.html_url}" target="_blank">${repo.full_name}</a></h5>
             <p class="card-text">${repo.description}</p>
             <p class="card-text"><strong>Language:</strong> ${repo.language}</p>
             <!-- Display the stars count as an icon -->
@@ -74,7 +73,7 @@ document.querySelector('#card-size-toggle').addEventListener('click', function (
 });
 
 // Add an event listener to the filter toggle button
-document.querySelector('#filter-toggle').addEventListener('click', function(event) {
+document.querySelector('#filter-toggle').addEventListener('click', function (event) {
   // Toggle the 'd-none' class on the language filter element
   document.querySelector('#language-filter').classList.toggle('d-flex');
   document.querySelector('#language-text').classList.toggle('d-flex');
