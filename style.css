@@ -4,6 +4,12 @@
     flex-wrap: wrap;
     justify-content: center;
 }
+  
+.card {
+    width: 1500px;
+    height: 250px;
+    margin: 0.5rem;
+}
 
 @media (max-width: 575.98px) {
     .card {
@@ -11,12 +17,6 @@
       height: 200px;
     }
   }
-  
-.card {
-    width: 1500px;
-    height: 250px;
-    margin: 0.5rem;
-}
 
 /* Add custom styling for the spinner */
 #loading-spinner .spinner-border {
