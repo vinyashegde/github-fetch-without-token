@@ -11,13 +11,6 @@
     margin: 0.5rem;
 }
 
-@media (max-width: 575.98px) {
-    .card {
-      width: 300px;
-      height: 200px;
-    }
-  }
-
 /* Add custom styling for the spinner */
 #loading-spinner .spinner-border {
     width: 3rem;

@@ -1,5 +1,5 @@
 // Add an event listener to the search button
-document.querySelector('button[type="submit"]').addEventListener('click', function (event) {
+document.querySelector('button[type="submit"]').addEventListener('click', function(event) {
   // Prevent the form from being submitted and refreshing the page
   event.preventDefault();
 
@@ -26,7 +26,6 @@ document.querySelector('button[type="submit"]').addEventListener('click', functi
         const card = document.createElement('div');
         card.classList.add('card');
         card.innerHTML = `
-        <div class="card col-12 col-md-6">
           <div class="card-body">
             <h5 class="card-title"><a href="${repo.html_url}">${repo.full_name}</a></h5>
             <p class="card-text">${repo.description}</p>
@@ -34,9 +33,8 @@ document.querySelector('button[type="submit"]').addEventListener('click', functi
             <p class="card-text"><strong>Stars:</strong> ${repo.stargazers_count}</p>
             <p class="card-text"><strong>Forks:</strong> ${repo.forks_count}</p>
           </div>
-          </div>
         `;
         document.querySelector('#card-container').appendChild(card);
       });
     });
-});
+  });
