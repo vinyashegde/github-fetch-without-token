@@ -4,7 +4,7 @@
     flex-wrap: wrap;
     justify-content: center;
 }
-  
+
 .card {
     width: 1500px;
     height: 250px;
@@ -17,4 +17,20 @@
     height: 3rem;
 }
 
-  
+/* Dark mode styles */
+html.dark-mode {
+    background-color: #333333;
+    color: #ffffff;
+    
+}
+
+html.dark-mode .card {
+    background-color: #444444;
+    
+}
+
+#mode-toggle {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }

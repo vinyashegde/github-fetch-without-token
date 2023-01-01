@@ -1,5 +1,27 @@
+let isDarkMode = false;
+
+document.addEventListener('DOMContentLoaded', () => {
+  
+
+  document.querySelector('#mode-toggle').addEventListener('click', () => {
+    isDarkMode = !isDarkMode;
+    if (isDarkMode) {
+      document.querySelector('body').style.backgroundColor = '#222222';
+      document.querySelector('body').style.color = '#999999';
+      document.querySelector('#mode-toggle').classList.remove('btn-light');
+      document.querySelector('#mode-toggle').classList.add('btn-dark');
+    } else {
+      document.querySelector('body').style.backgroundColor = '#ffffff';
+      document.querySelector('body').style.color = '#222222';
+      document.querySelector('#mode-toggle').classList.remove('btn-dark');
+      document.querySelector('#mode-toggle').classList.add('btn-light');
+    }
+  });
+});
+
+
 // Add an event listener to the search button
-document.querySelector('button[type="submit"]').addEventListener('click', function(event) {
+document.querySelector('button[type="submit"]').addEventListener('click', function (event) {
   // Prevent the form from being submitted and refreshing the page
   event.preventDefault();
 
@@ -39,6 +61,9 @@ document.querySelector('button[type="submit"]').addEventListener('click', functi
         `;
         document.querySelector('#card-container').appendChild(card);
       });
-      
+
     });
-  });
+});
+
+
+
