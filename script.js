@@ -1,7 +1,7 @@
 let isDarkMode = false;
 
 document.addEventListener('DOMContentLoaded', () => {
-  
+
 
   document.querySelector('#mode-toggle').addEventListener('click', () => {
     isDarkMode = !isDarkMode;
@@ -49,14 +49,14 @@ document.querySelector('button[type="submit"]').addEventListener('click', functi
         card.classList.add('card');
         card.innerHTML = `
           <div class="card-body">
-            <!-- Separate the username from the repository name -->
-            <h5 class="card-title"><a href="${repo.html_url}">${repo.full_name.split('/')[0]}</a> / <a href="${repo.html_url}">${repo.full_name.split('/')[1]}</a></h5>
+            <!-- Use the full_name property directly -->
+            <h5 class="card-title"><a href="${repo.html_url}">${repo.full_name}</a></h5>
             <p class="card-text">${repo.description}</p>
             <p class="card-text"><strong>Language:</strong> ${repo.language}</p>
             <!-- Display the stars count as an icon -->
-            <p class="card-text"><strong></strong> <i class="fas fa-star"></i> ${repo.stargazers_count}</p>
+            <p class="card-text"><strong> </strong> <i class="fas fa-star"></i> ${repo.stargazers_count}</p>
             <!-- Display the forks count as an icon -->
-            <p class="card-text"><strong></strong> <i class="fas fa-code-branch"></i> ${repo.forks_count}</p>
+            <p class="card-text"><strong> </strong> <i class="fas fa-code-branch"></i> ${repo.forks_count}</p>
           </div>
         `;
         document.querySelector('#card-container').appendChild(card);
@@ -64,6 +64,23 @@ document.querySelector('button[type="submit"]').addEventListener('click', functi
 
     });
 });
+
+// Add an event listener to the card size toggle button
+document.querySelector('#card-size-toggle').addEventListener('click', function (event) {
+  // Toggle the 'card-large' class on the card elements
+  document.querySelectorAll('.card').forEach(card => {
+    card.classList.toggle('card-large');
+  });
+});
+
+// Add an event listener to the filter toggle button
+document.querySelector('#filter-toggle').addEventListener('click', function(event) {
+  // Toggle the 'd-none' class on the language filter element
+  document.querySelector('#language-filter').classList.toggle('d-flex');
+  document.querySelector('#language-text').classList.toggle('d-flex');
+});
+
+
 
 
 

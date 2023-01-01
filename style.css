@@ -7,9 +7,16 @@
 
 .card {
     width: 1500px;
-    height: 250px;
+    height: 225px;
     margin: 0.5rem;
 }
+
+/* Style for large cards */
+.card-large {
+    width: 350px;
+    height: 400px;
+}
+
 
 /* Add custom styling for the spinner */
 #loading-spinner .spinner-border {
@@ -21,16 +28,28 @@
 html.dark-mode {
     background-color: #333333;
     color: #ffffff;
-    
+
 }
 
 html.dark-mode .card {
     background-color: #444444;
-    
+
 }
 
 #mode-toggle {
     position: absolute;
     top: 0;
     right: 0;
-  }
+}
+
+#card-size-toggle{
+    position: absolute;
+    top: 50px;
+    right: 0;
+}
+
+#filter-toggle{
+    position: absolute;
+    top: 100px;
+    right: 0;
+}

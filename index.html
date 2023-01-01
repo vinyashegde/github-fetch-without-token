@@ -34,8 +34,8 @@
             </div>
             <!-- Add a dropdown to select the programming language filter -->
             <div class="form-group">
-                <label for="language-filter">Filter by language:</label>
-                <select class="form-control" id="language-filter">
+                <label for="language-filter" id="language-text" style="display: none">Filter by language:</label>
+                <select class="form-control" id="language-filter" style="display: none">
                     <option value="">All</option>
                     <option value="JavaScript">JavaScript</option>
                     <option value="Java">Java</option>
@@ -65,6 +65,18 @@
         <button id="mode-toggle" class="btn btn-light" title="Toggle dark/light mode">
             <i class="fas fa-moon"></i>
         </button>
+
+        <!-- Add a button to change the card size -->
+        <button id="card-size-toggle" class="btn btn-secondary" title="Toggle card size">
+            <i class="fas fa-th-large"></i>
+        </button>
+
+        <!-- Add a button to toggle the visibility of the language filter -->
+        <button id="filter-toggle" class="btn btn-secondary" title="Toggle language filter">
+            <i class="fas fa-filter"></i>
+        </button>
+
+
 
         <!-- Your custom JavaScript for the search functionality -->
         <script src="script.js"></script>
